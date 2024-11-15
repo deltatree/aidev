@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk update && apk add curl nodejs git openjdk17-jdk build-base && curl https://get.gptscript.ai/install.sh | sh && mkdir /.cache /workspace && chmod 777 /.cache /workspace
+RUN apk update && apk add curl nodejs git openjdk17-jdk build-base github-cli && curl https://get.gptscript.ai/install.sh | sh && mkdir /.cache /workspace && chmod 777 /.cache /workspace
 
 COPY --from=golang:alpine /usr/local/go/ /usr/local/go/
 
